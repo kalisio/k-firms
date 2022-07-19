@@ -7,7 +7,7 @@ A [Krawler](https://kalisio.github.io/krawler/) based service to download data f
 
 ## Description
 
-The **k-firms** job allows to scrape data from the FIRMS using the following url: [https://firms.modaps.eosdis.nasa.gov/data/active_fire/suomi-npp-viirs-c2/csv/SUOMI_VIIRS_C2_Global_7d.csv](https://firms.modaps.eosdis.nasa.gov/data/active_fire/suomi-npp-viirs-c2/csv/SUOMI_VIIRS_C2_Global_7d.csv)`. The downloaded data are stored within a [MongoDB](https://www.mongodb.com/) database:
+The **k-firms** job allows to scrape data from the FIRMS using the following url: `[https://firms.modaps.eosdis.nasa.gov/data/active_fire/suomi-npp-viirs-c2/csv/SUOMI_VIIRS_C2_Global_7d.csv](https://firms.modaps.eosdis.nasa.gov/data/active_fire/suomi-npp-viirs-c2/csv/SUOMI_VIIRS_C2_Global_7d.csv)`. The downloaded data are stored within a [MongoDB](https://www.mongodb.com/) database:
 * the `firms` collection stores the Thermal Hotspots and Fire Activity data 
 
 All records are stored in [GeoJson](https://fr.wikipedia.org/wiki/GeoJSON) format.
