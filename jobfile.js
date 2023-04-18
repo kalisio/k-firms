@@ -28,11 +28,11 @@ export default {
             query: {},
             sort: { time: -1 },
             limit: 1
-          } 
+          }
         },
         after: {
             readCSV: {
-              headers: true,
+              header: true,
               transform: {
                 unitMapping: {
                   latitude: { asNumber: true },
