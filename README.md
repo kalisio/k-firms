@@ -1,7 +1,7 @@
 # k-firms
 
 [![Latest Release](https://img.shields.io/github/v/tag/kalisio/k-firms?sort=semver&label=latest)](https://github.com/kalisio/k-firms/releases)
-[![Build Status](https://app.travis-ci.com/kalisio/k-firms.svg?branch=master)](https://app.travis-ci.com/kalisio/k-firms)
+[![ci](https://github.com/kalisio/k-firms/actions/workflows/main.yaml/badge.svg)](https://github.com/kalisio/k-firms/actions/workflows/main.yaml)
 
 A [Krawler](https://kalisio.github.io/krawler/) based service to download data from the [Fire Information for Resource Management System (FIRMS)](https://wifire-data.sdsc.edu/dataset/viirs-i-band-375-m-active-fire-data).
 
