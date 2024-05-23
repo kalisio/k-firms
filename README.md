@@ -1,7 +1,10 @@
 # k-firms
 
 [![Latest Release](https://img.shields.io/github/v/tag/kalisio/k-firms?sort=semver&label=latest)](https://github.com/kalisio/k-firms/releases)
-[![ci](https://github.com/kalisio/k-firms/actions/workflows/main.yaml/badge.svg)](https://github.com/kalisio/k-firms/actions/workflows/main.yaml)
+[![CI](https://github.com/kalisio/k-firms/actions/workflows/main.yaml/badge.svg)](https://github.com/kalisio/k-firms/actions/workflows/main.yaml)
+[![Code Climate](https://codeclimate.com/github/kalisio/k-firms/badges/gpa.svg)](https://codeclimate.com/github/kalisio/k-firms)
+[![Test Coverage](https://codeclimate.com/github/kalisio/k-firms/badges/coverage.svg)](https://codeclimate.com/github/kalisio/k-firms/coverage)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
 A [Krawler](https://kalisio.github.io/krawler/) based service to download data from the [Fire Information for Resource Management System (FIRMS)](https://wifire-data.sdsc.edu/dataset/viirs-i-band-375-m-active-fire-data).
 
