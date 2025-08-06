@@ -40,13 +40,19 @@ module.exports = function ({ wmtsUrl, tmsUrl, wmsUrl, wcsUrl, k2Url, s3Url }) {
       tiled: true,
       minZoom: 10,
       cluster: { disableClusteringAtZoom: 10 },
-      'marker-type': 'circleMarker',
-      radius: 8,
-      'stroke-width': 0,
-      'stroke-opacity': 0,
-      'fill-opacity': 0.6,
-      'fill-color': '<%= chroma.scale(\'OrRd\').domain([0, 100])(properties.frp).hex() %>',
-      template: ['fill-color']
+      style: {
+        point: {
+          shape: 'circle',
+          color: '<%= chroma.scale(\'OrRd\').domain([0, 100])(properties.frp).hex() %>',
+          opacity: 0.6,
+          radius: 8,
+          stroke: {
+            width: 0,
+            opacity: 0
+          }
+        }
+      },
+      template: ['style.point.color']
       /*
       type: 'heatmap',
       cfg: {
@@ -78,8 +84,18 @@ module.exports = function ({ wmtsUrl, tmsUrl, wmsUrl, wcsUrl, k2Url, s3Url }) {
       type: 'geoJson',
       realtime: true,
       cluster: { pixelRange: 50 },
-      'marker-symbol': 'fire-station',
-      'marker-color': '#f09078'
+      style: {
+        point: {
+          shape: 'fire-station',
+          color: '#f09078',
+          opacity: 0.6,
+          radius: 8,
+          stroke: {
+            width: 0,
+            opacity: 0
+          }
+        }
+      }
     }
   }]
 }

@@ -5,6 +5,8 @@ import { fileURLToPath } from 'url'
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url))
 const dbUrl = process.env.DB_URL || 'mongodb://127.0.0.1:27017/kano'
+const history = process.env.HISTORY || '48h'
+const region = process.env.REGION || 'Global'
 
 export default {
   id: 'firms',
@@ -15,7 +17,7 @@ export default {
     id: 's-npp',
     type: 'http',
     options: {
-      url: 'https://firms.modaps.eosdis.nasa.gov/data/active_fire/suomi-npp-viirs-c2/csv/SUOMI_VIIRS_C2_Global_7d.csv'
+      url: `https://firms.modaps.eosdis.nasa.gov/data/active_fire/suomi-npp-viirs-c2/csv/SUOMI_VIIRS_C2_${region}_${history}.csv`
     }
   }],
   hooks: {
