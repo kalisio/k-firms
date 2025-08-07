@@ -7,12 +7,18 @@ module.exports = function ({ wmtsUrl, tmsUrl, wmsUrl, wcsUrl, k2Url, s3Url }) {
         Layers: {
           FIRMS: 'FIRMS',
           FIRMS_DESCRIPTION: 'Points chauds (Fire Information for Resource Management System)'
+        },
+        Variables: {
+          FIRE_RADIATIVE_POWER: 'Puissance radiative du feu'
         }
       },
       en: {
         Layers: {
           FIRMS: 'FIRMS',
           FIRMS_DESCRIPTION: 'Thermal hotspots (Fire Information for Resource Management System)'
+        },
+        Variables: {
+          FIRE_RADIATIVE_POWER: 'Fire radiative power'
         }
       }
     },
@@ -23,36 +29,49 @@ module.exports = function ({ wmtsUrl, tmsUrl, wmsUrl, wcsUrl, k2Url, s3Url }) {
     iconUrl: 'https://firms.modaps.eosdis.nasa.gov/images/nasa_logo_white.png',
     attribution: "<a href='https://www.earthdata.nasa.gov/learn/find-data/near-real-time/firms'>NASA FIRMS</a>",
     type: 'OverlayLayer',
-    chromajs: {
-      scale: 'OrRd',
-      domain: [0, 100]
+    scope: 'user',
+    variables: [
+      {
+        name: 'frp',
+        label: 'Variables.FIRE_RADIATIVE_POWER',
+        unit: 'MW',
+        chartjs: {
+          backgroundColor: 'rgba(54, 162, 235, 128)',
+          borderColor: 'rgb(54, 162, 235)',
+          fill: false
+        },
+        chromajs: {
+          colors: 'OrRd',
+          domain: [0, 100]
+        }
+      }
+    ],
+    legend: {
+      type: 'variables'
     },
-    units: ['MW'],
     service: 'firms',
     dbName: (process.env.DATA_DB_URL ? 'data' : undefined),
     from: 'P-7D',
     to: 'PT-1H',
     every: 'PT1H',
-    queryFrom: 'PT-24H',
+    queryFrom: 'PT-2H',
     leaflet: {
       type: 'geoJson',
       realtime: true,
       tiled: true,
-      minZoom: 10,
-      cluster: { disableClusteringAtZoom: 10 },
+      minZoom: 8,
+      cluster: { disableClusteringAtZoom: 8 },
       style: {
         point: {
-          shape: 'circle',
-          color: '<%= chroma.scale(\'OrRd\').domain([0, 100])(properties.frp).hex() %>',
-          opacity: 0.6,
-          radius: 8,
-          stroke: {
-            width: 0,
-            opacity: 0
+          shape: 'none',
+          icon: {
+            color: `<%= variables.frp.colorScale(properties.frp).hex() %>`,
+            classes: 'fa fa-fire',
+            size: 12
           }
         }
       },
-      template: ['style.point.color']
+      template: ['style.point.icon.color']
       /*
       type: 'heatmap',
       cfg: {

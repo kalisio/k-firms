@@ -10,7 +10,7 @@ const region = process.env.REGION || 'Global'
 
 export default {
   id: 'firms',
-  store: 'memory',
+  store: 'fs',
   taskTemplate: {
   },
   tasks: [{
