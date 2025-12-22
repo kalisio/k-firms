@@ -50,3 +50,5 @@ build_job \
     "$KALISIO_DOCKERHUB_USERNAME" \
     "$KALISIO_DOCKERHUB_PASSWORD" \
     "$PUBLISH"
+
+cd "$ROOT_DIR" && sonar-scanner
