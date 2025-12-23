@@ -3,7 +3,7 @@
 [![Latest Release](https://img.shields.io/github/v/tag/kalisio/k-firms?sort=semver&label=latest)](https://github.com/kalisio/k-firms/releases)
 [![CI](https://github.com/kalisio/k-firms/actions/workflows/main.yaml/badge.svg)](https://github.com/kalisio/k-firms/actions/workflows/main.yaml)
 [![Maintainability Issues](https://sonar.portal.kalisio.com/api/project_badges/measure?project=kalisio-k-firms&metric=software_quality_maintainability_issues&token=sqb_d044b63b439ae0a0ae504700f378a3da1840e0f3)](https://sonar.portal.kalisio.com/dashboard?id=kalisio-k-firms)
-[![Maintainability Issues](https://sonar.portal.kalisio.com/api/project_badges/measure?project=kalisio-k-firms&metric=software_quality_maintainability_issues&token=sqb_d044b63b439ae0a0ae504700f378a3da1840e0f3)](https://sonar.portal.kalisio.com/dashboard?id=kalisio-k-firms)
+[![Coverage](https://sonar.portal.kalisio.com/api/project_badges/measure?project=kalisio-k-firms&metric=coverage&token=sqb_d044b63b439ae0a0ae504700f378a3da1840e0f3)](https://sonar.portal.kalisio.com/dashboard?id=kalisio-k-firms)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
 A [Krawler](https://kalisio.github.io/krawler/) based service to download data from the [Fire Information for Resource Management System (FIRMS)](https://wifire-data.sdsc.edu/dataset/viirs-i-band-375-m-active-fire-data).
